@@ -33,6 +33,15 @@ const Sidebar = () => {
                 Counter
               </p>
             </NavLink>
+
+            <NavLink
+              to="/counterusestate"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            >
+              <p className="w-full h-full rounded py-2 px-4 centered">
+                Counter with useState
+              </p>
+            </NavLink>
           </div>
         </div>
       </div>

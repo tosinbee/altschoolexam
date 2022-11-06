@@ -1,1 +1,1 @@
-export { default as Icon } from "./Icon";
+export { FallbackComponent } from "./FallbackComponent";

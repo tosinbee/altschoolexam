@@ -1,12 +1,12 @@
 import React from "react";
+import useStateCounter from "../hooks/useStateCounter";
 import me from "../assets/me.png";
 import resetlogo from "../assets/resetlogo.svg";
-import useReducer from "../hooks/useReducer";
 import Button from "../components/Button";
 
-function Counter() {
-  const { state, increment, decrement, reset, setValue } = useReducer();
-
+function CounterWithStates() {
+  const { value, incrementAction, decrementAction, resetAction } =
+    useStateCounter();
   return (
     <>
       <div className="flex mb-10">
@@ -17,18 +17,18 @@ function Counter() {
       </div>
 
       <div className="Counter">
-        <div className="text-4xl mb-20">count: {state.count}</div>
         <div className="flex  ">
           <div className="flex gap-x-8  ">
-            <Button className=" bg-blue-400" onClick={increment}>
+            <h1>{value}</h1>
+            <Button className=" bg-blue-400" onClick={incrementAction}>
               Increment
             </Button>
-            <Button className="bg-primaRed" onClick={decrement}>
+            <Button className="bg-primaRed" onClick={decrementAction}>
               Decrement
             </Button>
             <Button
               className="bg-purple-300 text-gray-900 w-20"
-              onClick={reset}
+              onClick={resetAction}
             >
               <img
                 src={resetlogo}
@@ -37,9 +37,6 @@ function Counter() {
               />
               RESET
             </Button>
-            <Button className="bg-yellow-300 text-gray-900" onClick={setValue}>
-              Divide by 2
-            </Button>
           </div>
         </div>
       </div>
@@ -47,4 +44,4 @@ function Counter() {
   );
 }
 
-export default Counter;
+export default CounterWithStates;

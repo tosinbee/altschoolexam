@@ -1,5 +1,5 @@
 import React from "react";
-import { Counter, Home, NotFound } from "../pages";
+import { Counter, Home, NotFound, CounterWithStates } from "../pages";
 import { Route, Routes } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import FallbackComponent from "./FallbackComponent";
@@ -22,6 +22,17 @@ function Sidepage() {
               onError={errorHandler}
             >
               <Counter />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="/counterusestate"
+          element={
+            <ErrorBoundary
+              FallbackComponent={FallbackComponent}
+              onError={errorHandler}
+            >
+              <CounterWithStates />
             </ErrorBoundary>
           }
         />

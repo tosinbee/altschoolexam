@@ -42,7 +42,7 @@ function useCounter() {
   };
   const decrement = () => {
     try {
-      if (state.count <= MAX_COUNT_DECREMENT_ALLOWED) {
+      if (state.count >= MAX_COUNT_DECREMENT_ALLOWED) {
         throw new Error("Count Limit exceeded");
       } else {
         dispatch({ type: actions.decrement });
