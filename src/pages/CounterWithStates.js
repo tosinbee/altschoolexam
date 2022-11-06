@@ -19,19 +19,8 @@ function CounterWithStates() {
         <link rel="canonical" href="/counterusestate" />
       </Helmet>
 
-      <div className="flex mb-10">
+      <div className="mb-20 mt-10 mx-20">
         <h1 className="text-3xl mr-86">Counter with UseState</h1>
-        <div className="flex ml-[34vw] shadow-2xl  ">
-          <img
-            src={me}
-            alt="profile icon"
-            className="rounded-md w-16 h-18 "
-            width="69"
-            height="49"
-            loading="eager"
-            title="profile-picture"
-          />
-        </div>
       </div>
       <div className="Counter">
         <div className="flex  ">
