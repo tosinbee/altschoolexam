@@ -13,8 +13,15 @@ const Sidebar = () => {
       <div>
         {/* ALTSCHOOL Logo */}
 
-        <div className="hidden justify-center mt-3 md:block">
-          <img src={altschoollogo} alt="logout icon" />
+        <div className="overflow-hidden justify-center mt-3 ">
+          <img
+            src={altschoollogo}
+            alt="altschool icon"
+            width="69"
+            height="49"
+            loading="eager"
+            title="altschool-icon"
+          />
 
           {/* Links */}
           {/* These are the links on my side bar */}

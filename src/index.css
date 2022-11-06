@@ -47,9 +47,9 @@
   border-radius: 19px;
 }
 .Counter{
-  width: 55%;
+  width: 60.23%;
   background-color: rgb(255, 255, 255);
-  padding: 1em;
+  padding: 2em;
   box-shadow: 0 0 3px 2px gray;
   color: #000000;
   border-radius: 19px;
@@ -78,4 +78,9 @@
   color: #ffffff;
   border-radius: 19px;
   margin-top: 67px;
+}
+
+
+h1, h2{
+  font-size: 30px;
 }

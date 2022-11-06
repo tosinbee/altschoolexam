@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import me from "../assets/me.png";
+import { Helmet } from "react-helmet-async";
 
 function Loader() {
   return (
@@ -18,7 +19,15 @@ function Content() {
           Hello &#129306;! My name is Tosin Badmus.
         </h1>
         <div className="flex ml-[34vw] shadow-2xl text-black-900">
-          <img src={me} alt="profile icon" className="rounded-md w-16 h-18" />
+          <img
+            src={me}
+            alt="profile icon"
+            className="rounded-md w-16 h-18"
+            width="69"
+            height="49"
+            loading="eager"
+            title="profile-picture"
+          />
         </div>
       </div>
       <h2 className="text-3xl my-2 text-black-900">
@@ -52,6 +61,11 @@ function Home() {
   }, 1000);
   return (
     <>
+      <Helmet>
+        <title>Home</title>
+        <meta name="description" content="This page contains the homepage" />
+        <link rel="canonical" href="/" />
+      </Helmet>
       <section className="main-container">
         {isLoading ? <Loader /> : <Content />}
       </section>

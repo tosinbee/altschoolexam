@@ -5,7 +5,7 @@ import Sidepage from "./Sidepage";
 function MainPage() {
   return (
     <>
-      <section className="flex">
+      <section className="flex overflow-hidden">
         {/* sidebar */}
         <div className="bg-black w-[20vw] h-screen p-10">
           <Sidebar />
